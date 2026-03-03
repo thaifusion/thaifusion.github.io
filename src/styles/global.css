@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-  background-color: #e3eaf3;
+  background-color: #f4f0e9;
   font-family: sans-serif;
 }
 
@@ -43,27 +43,28 @@ html.dark {
 }
 
 .dark a {
-  color: #ff9776;
+  color: #ebd7d1;
 }
 
 /* nav styles */
 .menu {
   background-color: #0d0950;
   border: none;
-  color: #fff;
+  color: #e0d3d3;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 5px 10px;
 }
 
 .nav-links {
-  width: 100%;
   display: none;
-  margin: 0;
 }
 
 .nav-links.open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .nav-links a {
@@ -71,7 +72,7 @@ html.dark {
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #0d0950;
@@ -79,16 +80,26 @@ html.dark {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #e0d3d3;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu {
+  font-size: 0.7rem;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
+    margin-left: auto;     /* skyv linkene mot høyre */
+    display: flex;
+    gap: 20px;
   }
 
   .nav-links a {
@@ -96,7 +107,13 @@ html.dark {
     padding: 15px 20px;
   }
 
+  /* Skjuler menyknappen på større skjermer */
   .menu {
-    display: none;
+    display: none;  
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
   }
 }
