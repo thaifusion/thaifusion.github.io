@@ -8,7 +8,11 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "devDependencies": {
+    "astro": "^5.18.0"
+  },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1"
   }
 }

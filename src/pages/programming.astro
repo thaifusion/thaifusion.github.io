@@ -3,8 +3,7 @@ import Header from '../components/header.astro';
 import '../styles/global.css';
 import Footer from '../components/footer.astro';
 
-
-const pageTitle = "Portfolio"
+const pageTitle = "Programming Projects"
 ---
 
 <html lang="en">
@@ -16,12 +15,14 @@ const pageTitle = "Portfolio"
     <title>{pageTitle}</title>
   </head>
   
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <Footer />
-    <script>
-      import '../scripts/menu.js';
-    </script>
-  </body>
+    <body>
+        <Header />
+        <h1>{pageTitle}</h1>
+        <p>This is the programming projects page for my portfolio website.</p>
+
+        <Footer />
+        <script>
+          import '../scripts/menu.js';
+        </script>
+    </body>
 </html>

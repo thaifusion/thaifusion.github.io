@@ -1,0 +1,17 @@
+---
+import Social from './social.astro';
+const username = 'thaifusion';
+---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+  }
+</style>
+
+
+<footer>
+    <p>© 2026 {username}. All rights reserved.</p>
+    <Social platform="github" username={username} />
+</footer>
