@@ -37,45 +37,24 @@ const title = Astro.props.title ?? "Portfolio";
     </audio>
 
     <script>
-      declare global {
-        interface Window {
-          __bgm: {
-            audio: HTMLAudioElement;
-            play: () => Promise<void>;
-            pause: () => void;
-            isPlaying: () => boolean;
-          };
-        }
-      }
+  const el = document.getElementById("site-bgm");
+  const audio = el instanceof HTMLAudioElement ? el : null;
 
-      const audio = document.getElementById("site-bgm") as HTMLAudioElement;
-
-      if (audio) {
-        window.__bgm = {
-          audio,
-          play: async () => audio.play(),
-          pause: () => audio.pause(),
-          isPlaying: () => !audio.paused,
-        };
-
-        const saved = localStorage.getItem("musicEnabled") === "true";
-        if (saved) {
-          window.addEventListener(
-            "pointerdown",
-            async () => {
-              try { await audio.play(); } catch {}
-            },
-            { once: true }
-          );
-        }
-      }
-    </script>
+  if (audio) {
+    window.__bgm = {
+      audio,
+      play: async () => audio.play(),
+      pause: () => audio.pause(),
+      isPlaying: () => !audio.paused,
+    };
+  }
+</script>
 
     <ClickSound />
 
-    <script type="module">
-      import "../scripts/menu.js";
-    </script>
+  <script type="module">
+  import "../scripts/menu.js";
+  </script>
 
   </body>
 </html>

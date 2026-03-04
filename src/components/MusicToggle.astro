@@ -16,20 +16,19 @@ import { Icon } from "astro-icon/components";
     const btn = document.getElementById("musicToggle");
     if (!btn) return;
 
-    // unngå dobbel-binding etter transitions
     if (btn.dataset.bound === "1") return;
     btn.dataset.bound = "1";
 
-    function setUI(on: boolean) {
-      btn!.setAttribute("aria-pressed", String(on));
-      btn!.title = on ? "Skru av musikk" : "Skru på musikk";
-    }
+    const setUI = (on: boolean) => {
+      btn.setAttribute("aria-pressed", String(on));
+      btn.title = on ? "Skru av musikk" : "Skru på musikk";
+    };
 
     setUI(localStorage.getItem("musicEnabled") === "true");
 
     btn.addEventListener("click", async () => {
-      const bgm = window.__bgm; // <-- riktig navn
-      if (!bgm?.audio) return;
+      const bgm = window.__bgm;
+      if (!bgm || !bgm.audio) return;
 
       if (bgm.isPlaying()) {
         bgm.pause();

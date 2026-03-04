@@ -22,51 +22,81 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* dark mode styles */
+/* =========================
+   Dark mode
+========================= */
 html.dark {
   background-color: #1d022e;
   color: #ffffff;
-}
-
-.dark .menu {
-  background-color: #fff;
-  color: #000;
-}
-
-.dark .nav-links a:hover,
-.dark .nav-links a:focus {
-  color: #0d0950;
-}
-
-.dark .nav-links a {
-  color: #fff;
 }
 
 .dark a {
   color: #ebd7d1;
 }
 
-/* nav styles */
+/* =========================
+   Navbar / Menu
+========================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* venstre ikoner, høyre meny */
+  width: 100%;
+  position: relative; /* anker for dropdown */
+}
+
+/* Hamburger button */
 .menu {
   background-color: #0d0950;
   border: none;
   color: #e0d3df;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto; /* skyv til høyre hvis nødvendig */
+  position: relative;
+  z-index: 9999; /* alltid klikkbar */
 }
 
+/* Dark mode hamburger */
+html.dark .menu {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Links container (mobile default: hidden) */
 .nav-links {
   display: none;
 }
 
+/* Mobile dropdown when open */
 .nav-links.open {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
+  gap: 8px;
+  padding: 12px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  background: #c8b4cd;
+  z-index: 9998;
 }
 
+/* Dark mode dropdown background */
+html.dark .nav-links.open {
+  background: #1d022e;
+}
+
+/* Links styling */
 .nav-links a {
   display: block;
   text-align: center;
@@ -76,6 +106,11 @@ html.dark {
   font-weight: bold;
   text-transform: uppercase;
   color: #0d0950;
+  border-radius: 6px;
+}
+
+html.dark .nav-links a {
+  color: #fff;
 }
 
 .nav-links a:hover,
@@ -83,37 +118,40 @@ html.dark {
   background-color: #e0d3d3;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+html.dark .nav-links a:hover,
+html.dark .nav-links a:focus {
+  color: #0d0950;
 }
 
-.menu {
-  font-size: 1rem;
-  margin-left: auto;
-}
-
+/* =========================
+   Desktop layout
+========================= */
 @media screen and (min-width: 636px) {
+  .menu {
+    display: none; /* skjul hamburger på desktop */
+  }
+
   .nav-links {
-    margin-left: auto;     /* skyv linkene mot høyre */
-    display: flex;
+    display: flex; /* vis links */
     gap: 20px;
+    margin-left: auto;
+    position: static; /* ikke dropdown */
+    padding: 0;
+    background: transparent;
+  }
+
+  .nav-links.open {
+    /* bare for sikkerhet */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: static;
+    padding: 0;
+    background: transparent;
   }
 
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
-  }
-
-  /* Skjuler menyknappen på større skjermer */
-  .menu {
-    display: none;  
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
   }
 }
