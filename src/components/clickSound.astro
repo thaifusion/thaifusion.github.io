@@ -1,0 +1,17 @@
+<script>
+  const clickSound = new Audio("/sounds/494493__sheyvan__button-clicking-7-single.wav");
+  clickSound.volume = 0.25;
+
+  document.addEventListener("click", (e) => {
+    // Finn nærmeste knapp eller lenke som ble klikket
+    const el = (e.target as HTMLElement)?.closest("button, a");
+    if (!el) return;
+
+    // Ikke spill lyd for eksterne linker (valgfritt)
+    // const isExternal = el.tagName === "A" && el.href && !el.href.startsWith(location.origin);
+    // if (isExternal) return;
+
+    clickSound.currentTime = 0;
+    clickSound.play().catch(() => {});
+  });
+</script>

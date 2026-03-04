@@ -1,0 +1,22 @@
+<button id="musicBtn">Spill musikk</button>
+
+<audio id="bgm" loop preload="none">
+  <source src="/sounds/629156__holizna__lofi-loop-em-119-bpm.wav" type="audio/wav" />
+</audio>
+
+<script>
+  const btn = document.getElementById("musicBtn");
+  const audio = document.getElementById("bgm") as HTMLAudioElement;
+
+  if (btn && audio) {
+    btn.addEventListener("click", async () => {
+    if (audio.paused) {
+      await audio.play();
+      btn.textContent = "Pause musikk";
+    } else {
+      audio.pause();
+      btn.textContent = "Spill musikk";
+    }
+    });
+  }
+</script>

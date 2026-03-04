@@ -2,12 +2,17 @@
 import Menu from '../components/menu.astro';
 import Navigation from "./navigation.astro";
 import ThemeIcon from './ThemeIcon.astro';
+import MusicToggle from './MusicToggle.astro';
 
 ---
 <header>
     <nav class="navbar">
+        <div class="flex items-center gap-5">
             <ThemeIcon />
-                <Menu />
+            <MusicToggle />
+        </div>
+        
         <Navigation />
+        
     </nav>
 </header>

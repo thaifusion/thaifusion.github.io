@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button id="musicToggle" class="music-btn" aria-pressed="false" title="Skru på musikk">
+  <span class="icon-on">
+    <Icon name="heroicons:speaker-wave-solid" width="20" height="20" />
+  </span>
+  <span class="icon-off">
+    <Icon name="heroicons:speaker-x-mark-solid" width="20" height="20" />
+  </span>
+</button>
+
+<script>
+  function initMusicToggle() {
+    const btn = document.getElementById("musicToggle");
+    if (!btn) return;
+
+    // unngå dobbel-binding etter transitions
+    if (btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+
+    function setUI(on: boolean) {
+      btn!.setAttribute("aria-pressed", String(on));
+      btn!.title = on ? "Skru av musikk" : "Skru på musikk";
+    }
+
+    setUI(localStorage.getItem("musicEnabled") === "true");
+
+    btn.addEventListener("click", async () => {
+      const bgm = window.__bgm; // <-- riktig navn
+      if (!bgm?.audio) return;
+
+      if (bgm.isPlaying()) {
+        bgm.pause();
+        localStorage.setItem("musicEnabled", "false");
+        setUI(false);
+      } else {
+        try {
+          await bgm.play();
+          localStorage.setItem("musicEnabled", "true");
+          setUI(true);
+        } catch (e) {
+          console.warn("Kunne ikke starte musikk:", e);
+        }
+      }
+    });
+  }
+
+  initMusicToggle();
+  document.addEventListener("astro:page-load", initMusicToggle);
+</script>
+
+<style>
+  .music-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:999px;
+    border:1px solid rgba(0,0,0,.15);
+    background:white;
+    color:#111;
+    cursor:pointer;
+  }
+  .music-btn .icon-on { display:none; }
+  .music-btn[aria-pressed="true"] .icon-on { display:inline-flex; }
+  .music-btn[aria-pressed="true"] .icon-off { display:none; }
+
+  html.dark .music-btn{
+    background:#1f2937;
+    border-color:rgba(255,255,255,.2);
+    color:#fff;
+  }
+</style>

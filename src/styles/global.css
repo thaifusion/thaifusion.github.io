@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-  background-color: #f4f0e9;
+  background-color: #c8b4cd;
   font-family: sans-serif;
 }
 
@@ -24,8 +24,8 @@ h1 {
 
 /* dark mode styles */
 html.dark {
-  background-color: #12022b;
-  color: #fff;
+  background-color: #1d022e;
+  color: #ffffff;
 }
 
 .dark .menu {
@@ -50,7 +50,7 @@ html.dark {
 .menu {
   background-color: #0d0950;
   border: none;
-  color: #e0d3d3;
+  color: #e0d3df;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 5px 10px;
