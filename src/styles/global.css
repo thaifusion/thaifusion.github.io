@@ -26,7 +26,7 @@ h1 {
    Dark mode
 ========================= */
 html.dark {
-  background-color: #1d022e;
+  background-color: #312639;
   color: #ffffff;
 }
 
@@ -47,7 +47,7 @@ html.dark {
 
 /* Hamburger button */
 .menu {
-  background-color: #0d0950;
+  background-color: #321d48;
   border: none;
   color: #e0d3df;
   font-size: 1rem;
@@ -93,7 +93,7 @@ html.dark .menu {
 
 /* Dark mode dropdown background */
 html.dark .nav-links.open {
-  background: #1d022e;
+  background: #c8b4cd;
 }
 
 /* Links styling */
