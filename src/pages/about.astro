@@ -5,11 +5,101 @@ import Footer from '../components/footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About">
+<BaseLayout>
+    <div class="max-w-screen-2xl mx-auto">
 
-<img src="/images/516853435_10239718544880431_3457688934739796084_n.jpg" alt="Profile picture" class="rounded-full w-80 h-80 mx-auto mb-6" />
+        <h1 class="text-center mt-10 mb-20 text-3xl">About Me</h1>
 
-<p class="text-center mt-10">Hi! I'm Sara, an IT student and creative based in Norway. 
-</p>
+        {/* Profile picture and introduction */}
+        <div class="mt-10 relative w-75 h-75 mx-auto mb-10 group md:w-110 md:h-110">
+            <img
+                src="/images/516853435_10239718544880431_3457688934739796084_n.jpg"
+                alt="Profile picture"
+                class="absolute inset-0 rounded-full w-full h-full object-cover transform-transition duration-300 hover:scale-105 group-hover:opacity-0 shadow-xl"
+            />
 
+            <img src="/images/bilderedigert.png" 
+                alt="Profile picture"
+                class="absolute inset-0 rounded-full w-full h-full object-cover opacity-0 transform-transition duration-300 hover:scale-105 group-hover:opacity-100 shadow-xl"
+            />
+        </div>
+ 
+        <h1 class="text-center mt-15 text-2xl">Hi, I'm Sara!</h1>
+
+    <p class="mt-5 uppercase tracking-wide text-center text-sm font-semibold mb-6">
+        IT student and creative soul based in Norway
+    </p>
+
+    <p class="mt-10">
+        My journey into IT builds on a creative foundation. Before studying technology, 
+        I earned a bachelor’s degree in art, where I developed a strong sense of visual expression, 
+        composition, and hands-on creativity. 
+    </br>
+    </br>
+        Transitioning into IT has allowed me to expand that creativity 
+        into the digital space—working with programming, system development, and databases. 
+        I enjoy the process of turning ideas into interactive solutions, whether through clean code or thoughtful design. 
+        For me, the most rewarding projects are those where creativity and functionality meet.
+    </p>
+
+    <p class="mt-10 text-center text-3xl">
+        🌸
+    </p>
+
+        {/* Education and Skills Section */}
+        <section class="mt-20 grid gap-8 sm:grid-cols-2">
+   
+            <div class="bg-white/15 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl">
+                <h2 class="text-center uppercase text-lg font-semibold mb-6 tracking-widest">Education and Languages</h2>
+               
+                <ul class="list-disc list-outside mt-8 space-y-2">
+                    <li>IT student at University of South-Eastern Norway (2023-present)</li>
+                    <li>Bachelor’s degree in contemporary art at Nordland School of Arts and Film (2013-2016)</li>
+                    </br>
+                    <li>Fluent in Norwegian and English</li>
+                </ul>
+            </div>
+
+            {/* Programming skills */}
+            <div class="bg-white/15 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl">
+                <h2 class="text-center uppercase text-lg font-semibold mb-6 tracking-widest">Technical Skills</h2>
+
+                <ul class="list-disc list-outside mt-8 space-y-3">
+                    <li>Programming fundamentals: Java </li>
+                    <li>Frontend and backend development: HTML & CSS, Astro, Tailwind, JavaScript, React, Node.js</li>
+                    <li>Database management: MongoDB, SQL</li>
+                    <li>Version control: Git and GitHub</li>
+                    <li>Project management and teamwork</li>
+                </ul>
+            </div>
+
+            {/* Creative skills */}
+            <div class="bg-white/15 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl">
+            <h2 class="text-center uppercase text-lg font-semibold mb-6 tracking-widest">Creative Skills</h2>
+
+                <ul class="list-disc list-outside mt-8 space-y-3">
+                    <li>Visual design and artistic concepts </li>
+                    <li>Creative problem-solving and design thinking</li>
+                    <li>Experience with various art mediums and techniques</li>
+                </ul>
+            </div>
+
+            {/* Other interests */}
+            <div class="bg-white/15 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl">
+            <h2 class="text-center uppercase text-lg font-semibold mb-6 tracking-widest">Other Interests</h2>
+
+                <ul class="list-disc list-outside mt-8 space-y-2">
+                    <li>Knitting, reading</li>
+                    <li>Drawing, painting, sculpting, digital art</li>
+                    <li>Cooking and baking</li>
+                    <li>Photography, plants, nature walks</li>
+                    <li>Gaming with friends</li>
+
+                </ul>
+            </div>
+
+        </section>
+    </div>
 </BaseLayout>
+
+
