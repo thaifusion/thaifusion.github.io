@@ -1,1 +1,3 @@
 My own website to showcase my programming and creative projects.
+
+<img width="3687" height="1818" alt="image" src="https://github.com/user-attachments/assets/4b70521f-50df-4341-95b8-511f459540b4" />
