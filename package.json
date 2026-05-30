@@ -9,7 +9,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^6.2.1"
+    "astro": "^6.4.2"
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.3",
