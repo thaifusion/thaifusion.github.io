@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Global styles */
 html {
   background-color: #c8b4cd;
   font-family: sans-serif;
