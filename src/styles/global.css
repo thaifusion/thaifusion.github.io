@@ -90,7 +90,7 @@ html.dark .menu {
   left: 0;
   right: 0;
 
-  background: #c8b4cd;
+  background: #c4add3;
   z-index: 9998;
 }
 
@@ -108,7 +108,7 @@ html.dark .nav-links.open {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #0d0950;
+  color: #161316;
   border-radius: 6px;
 }
 
