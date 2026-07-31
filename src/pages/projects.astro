@@ -7,7 +7,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout>
 
-    <h1 class="text-center mt-10 mb-15 text-3xl">Projects</h1>
+    <h1 class="text-center mt-10 mb-15 text-3xl">
+        <span data-lang="en">Projects</span>
+        <span data-lang="no">Prosjekter</span>
+    </h1>
 
     <div class="w-full max-w-7xl mx-auto px-4 py-1 items-center justify-center">
         {/* Project Cards */}
@@ -26,7 +29,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Portfolio project for Hanna Karlsen
+                    <span data-lang="en">Portfolio project for Hanna Karlsen</span>
+                    <span data-lang="no">Porteføljeprosjekt for Hanna Karlsen</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -36,7 +40,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                    Portfolio project for a glass artist located at Andøya, Norway.  
+                    <span data-lang="en">Portfolio project for a glass artist located at Andøya, Norway.</span>
+                    <span data-lang="no">Porteføljeprosjekt for en glasskunstner lokalisert på Andøya, Norge.</span>
                     </p>
 
                 </a>
@@ -48,7 +53,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     target="_blank"
                     class="inline-flex items-center gap-2 rounded-full border border-default-medium  bg-purple-500/20 px-5 py-2.5 text-sm font-medium text-body shadow-md transition-all duration-300 hover:translate-x-1 hover:scale-[1.03] hover:bg-purple-500/40 hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary"
                 >
-                    Read more
+                    <span data-lang="en">Read more</span>
+                    <span data-lang="no">Les mer</span>
                     <svg class="w-7 h-7 transition-transform duration-300 group-hover:translate-x-1" 
                         aria-hidden="true" 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -67,7 +73,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     target="_blank"
                     class="inline-flex items-center gap-2 rounded-full border border-default-medium bg-purple-500/20 px-5 py-2.5 text-md font-medium text-body shadow-md transition-all duration-300 hover:translate-x-1 hover:scale-[1.03] hover:bg-purple-500/40 hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary"
                 >
-                    Visit Website
+                    <span data-lang="en">Website</span>
+                    <span data-lang="no">Nettside</span>
                     <svg
                     class="h-7 w-7 transition-transform duration-300 group-hover:translate-x-1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +104,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Personal Portfolio Website
+                    <span data-lang="en">Personal Portfolio Website</span>
+                    <span data-lang="no">Personlig porteføljenettside</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -107,7 +115,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                    This is a personal portfolio website built with Astro and Tailwind CSS. It features a clean and responsive design, animations, music player, and a contact form.
+                    <span data-lang="en">This is a personal portfolio website built with Astro and Tailwind CSS. It features a clean and responsive design, animations, music player, and a contact form.</span>
+                    <span data-lang="no">Dette er en personlig porteføljenettside bygget med Astro og Tailwind CSS. Den har en ren og responsiv design, animasjoner, musikkspiller, og en kontaktformular.</span>
                     </p>
 
                 </a>
@@ -119,7 +128,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     target="_blank"
                     class="inline-flex items-center gap-2 rounded-full border border-default-medium bg-purple-500/20 px-5 py-2.5 text-sm font-medium text-body shadow-md transition-all duration-300 hover:translate-x-1 hover:scale-[1.03] hover:bg-purple-500/40 hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary"
                 >
-                    Read more
+                    <span data-lang="en">Read more</span>
+                    <span data-lang="no">Les mer</span>
                     <svg class="w-7 h-7 transition-transform duration-300 group-hover:translate-x-1" 
                         aria-hidden="true" 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -145,7 +155,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Discgolf Mobile App
+                    <span data-lang="en">Discgolf Mobile App</span>
+                    <span data-lang="no">Discgolf mobilapp</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -155,9 +166,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                    This is a mobile app project developed for my MOB3000 course. This project is based on the same concept as the web application the APP2000 course, 
+                    <span data-lang="en">This is a mobile app project developed for my MOB3000 course. This project is based on the same concept as the web application the APP2000 course, 
                     but as a native Android app using Kotlin. Reusing the MongoDB backend from APP2000, the application was hosted on Heroku.
-                    The app is designed to help discgolf players find nearby courses, track their scores, and connect with other players. 
+                    The app is designed to help discgolf players find nearby courses, track their scores, and connect with other players. </span>
+                    <span data-lang="no">Dette er et mobilapplikasjonsprosjekt utviklet for mitt MOB3000-kurs. Dette prosjektet er basert på samme konsept som webapplikasjonen fra APP2000-kurs, 
+                    men som en lokal Android-app ved hjelp av Kotlin. Ved å gjenbruke MongoDB-backend fra APP2000, ble applikasjonen hostet på Heroku.
+                    Appen er designet til å hjelpe discgolf-spillere med å finne nærliggende baner, spore deres poeng og koble til andre spillere. </span>
                     </p>
 
                 </a>
@@ -169,7 +183,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     target="_blank"
                     class="inline-flex items-center gap-2 rounded-full border border-default-medium bg-purple-500/20 px-5 py-2.5 text-sm font-medium text-body shadow-md transition-all duration-300 hover:translate-x-1 hover:scale-[1.03] hover:bg-purple-500/40 hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary"
                 >
-                    Read more
+                    <span data-lang="en">Read more</span>
+                    <span data-lang="no">Les mer</span>
                     <svg class="w-7 h-7 transition-transform duration-300 group-hover:translate-x-1" 
                         aria-hidden="true" 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -196,7 +211,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Discgolf web application
+                    <span data-lang="en">Discgolf web application</span>
+                    <span data-lang="no">Discgolf webapplikasjon</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -206,7 +222,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                    This is a web application project I developed for my APP2000 course. The application is designed to help discgolf players find nearby courses, track their scores, and connect with other players. It was built using React for the frontend, with a backend hosted on Heroku using MongoDB for data storage. The application also integrates the Google Maps API for course locations.
+                    <span data-lang="en">This is a web application project I developed for my APP2000 course. The application is designed to help discgolf players find nearby courses, track their scores, and connect with other players. It was built using React for the frontend, with a backend hosted on Heroku using MongoDB for data storage. The application also integrates the Google Maps API for course locations.</span>
+                    <span data-lang="no">Dette er et webapplikasjonsprosjekt jeg utviklet for mitt APP2000-kurs. Applikasjonen er designet til å hjelpe discgolf-spillere med å finne nærliggende baner, spore deres poeng og koble til andre spillere. Den ble bygget ved hjelp av React for frontend, med en backend hostet på Heroku ved hjelp av MongoDB for dataoppbevaring. Applikasjonen integrerer også Google Maps API for kursplasseringer.</span>
                     </p>
 
                 </a>
@@ -218,7 +235,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     target="_blank"
                     class="inline-flex items-center gap-2 rounded-full border border-default-medium bg-purple-500/20 px-5 py-2.5 text-md font-medium text-body shadow-xs transition-all duration-300 hover:translate-x-1 hover:scale-[1.03] hover:bg-purple-500/40 hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary"
                 >
-                    Read more
+                    <span data-lang="en">Read more</span>
+                    <span data-lang="no">Les mer</span>
                     <svg class="w-7 h-7 transition-transform duration-300 group-hover:translate-x-1" 
                         aria-hidden="true" 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -244,7 +262,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Java Exam Project: Case system
+                    <span data-lang="en">Java Exam Project: Case system</span>
+                    <span data-lang="no">Java-eksamensprosjekt: saksbehandlingssystem</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -254,7 +273,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                        This is a case system application created for a Java exam project. The application is designed for managing and tracking cases, allowing users to create, update, and view case details. It was built using Java with JavaFX for the user interface and MySQL for data storage.
+                        <span data-lang="en">This is a case system application created for a Java exam project. The application is designed for managing and tracking cases, allowing users to create, update, and view case details. It was built using Java with JavaFX for the user interface and MySQL for data storage.</span>
+                        <span data-lang="no">Dette er en saksbehandlingssystemapplikasjon opprettet for et Java-eksamensprosjekt. Applikasjonen er designet for å administrere og spore saker, noe som gir brukere mulighet til å opprette, oppdatere og se saksdetaljer. Den ble bygget ved hjelp av Java med JavaFX for brukergrensesnittet og MySQL for dataoppbevaring.</span>
                     </p>
 
                 </a>
@@ -294,7 +314,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project title */}
                     <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading transition-colors group-hover:text-body">
-                    Java Project: Restaurant Simulation
+                    <span data-lang="en">Java Project: Restaurant Simulation</span>
+                    <span data-lang="no">Java-prosjekt: Restaurant-simulering</span>
                     </h5>
 
                     {/* Tech stack */}
@@ -304,7 +325,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     {/* Project description */}
                     <p class="mb-6 text-body leading-relaxed">
-                    This is a restaurant simulation project I developed for my Java course. The application is designed to simulate the operations of a restaurant, including managing reservations, seating arrangements, and order processing.
+                    <span data-lang="en">This is a restaurant simulation project I developed for my Java course. The application is designed to simulate the operations of a restaurant, including managing reservations, seating arrangements, and order processing.</span>
+                    <span data-lang="no">Dette er et restaurant-simuleringprosjekt jeg utviklet for mitt Java-kurs. Applikasjonen er designet til å simulere operasjonene til et restaurant, inkludert administrasjon av reservasjoner, seteoppsett og bestillingsbehandling.</span>
                     </p>
 
                 </a>

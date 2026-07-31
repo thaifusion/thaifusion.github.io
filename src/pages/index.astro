@@ -8,7 +8,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   {/* Header */}
 <div class="mt-6 space-y-6 md:mt-5 md:space-y-10">
-    <h1 class="text-center text-2xl md:text-4xl">Hi there!</h1>
+    <h1 class="text-center text-2xl md:text-4xl">
+      <span data-lang="en">Hi there!</span>
+      <span data-lang="no">Hei!</span>
+    </h1>
 
     <section class="mt-2 px-6">
   <div class="mx-auto w-full max-w-6xl">
@@ -23,16 +26,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="text-center max-w-xl space-y-4">
 
          <h1 class="text-2xl mt-5">
-            My name is Sara 🌸
+            <span data-lang="en">My name is Sara 🌸</span>
+          <span data-lang="no">Mitt navn er Sara 🌸</span>
         </h1>
 
         <p class="uppercase tracking-widest text-sm font-semibold">
-           IT student based in Norway
+          <span data-lang="en">Recently graduated IT student based in Norway</span>
+          <span data-lang="no">Nyutdannet IT-student bosatt i Norge</span>
         </p>
 
         
         <p class="mt-6 mb-10 text-xl">
-            I combine technical skills with a creative mindset shaped by my background in art.
+            <span data-lang="en">I combine technical skills with a creative mindset shaped by my background in art.</span>
+            <span data-lang="no">Jeg kombinerer tekniske ferdigheter med et kreativt tankesett formet av min bakgrunn fra kunst.</span>
         </p>
         
         </div>
@@ -75,15 +81,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="hidden md:block text-center max-w-xl mx-auto mt-20 space-y-4">
         
         <h1 class="text-2xl mt-15">
-            My name is Sara 🌸
+          <span data-lang="en">My name is Sara 🌸</span>
+          <span data-lang="no">Mitt navn er Sara 🌸</span>
         </h1>
 
         <p class="uppercase tracking-widest text-sm font-semibold">
-           Recently graduated IT student based in Norway
+           <span data-lang="en">Recently graduated IT student based in Norway</span>
+            <span data-lang="no">Nyutdannet IT-student bosatt i Norge</span>
         </p>
 
         <p class="mt-10 text-xl">
-            I combine technical skills with a creative mindset shaped by my background in art.
+          <span data-lang="en">I combine technical skills with a creative mindset shaped by my background in art.</span>
+          <span data-lang="no">Jeg kombinerer tekniske ferdigheter med et kreativt tankesett formet av min bakgrunn fra kunst.</span>
         </p>
     </div>
 

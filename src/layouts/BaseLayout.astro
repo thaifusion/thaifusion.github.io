@@ -6,11 +6,18 @@ import ClickSound from "../components/clickSound.astro";
 import { ClientRouter } from "astro:transitions";
 ---
 
-<html lang="en">
+<html lang="en" data-language="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      const storedLanguage = window.localStorage.getItem("site-language");
+      const initialLanguage = storedLanguage === "no" || storedLanguage === "nb" ? "no" : "en";
+
+      document.documentElement.dataset.language = initialLanguage;
+      document.documentElement.lang = initialLanguage;
+    </script>
     <ClientRouter />
   </head>
 
@@ -20,6 +27,16 @@ import { ClientRouter } from "astro:transitions";
     <main class="max-w-4xl mx-auto mt-10">
       <slot />
     </main>
+
+    <button
+      class="back-to-top"
+      type="button"
+      data-back-to-top
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
 
 
     <!-- Persist musikk (så den fortsetter) -->
@@ -48,6 +65,8 @@ import { ClientRouter } from "astro:transitions";
 
   <script type="module">
   import "../scripts/menu.js";
+  import "../scripts/language.js";
+  import "../scripts/backToTop.js";
   </script>
 
   <Footer />

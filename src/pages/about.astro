@@ -8,7 +8,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout>
     <div class="max-w-screen-2xl mx-auto">
 
-        <h1 class="text-center mt-10 mb-20 text-3xl">About Me</h1>
+        <h1 class="text-center mt-10 mb-20 text-3xl">
+            <span data-lang="en">About Me</span>
+            <span data-lang="no">Om meg</span>
+        </h1>
 
         {/* Profile picture and introduction */}
         <div class="mt-10 relative w-75 h-75 mx-auto mb-10 group md:w-110 md:h-110">
@@ -24,22 +27,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             />
         </div>
  
-        <h1 class="text-center mt-15 text-2xl">Hi, I'm Sara!</h1>
+        <h1 class="text-center mt-15 text-2xl">
+            <span data-lang="en">Hi, I'm Sara!</span>
+            <span data-lang="no">Hei, jeg heter Sara!</span>
+        </h1>
 
     <p class="mt-5 uppercase tracking-wide text-center text-sm font-semibold mb-6">
-        Recent graduate in IT and creative soul based in Norway
+        <span data-lang="en">Recent graduate in IT and creative soul based in Norway</span>
+        <span data-lang="no">Nyutdannet innen IT og en kreativ sjel bosatt i Norge</span>
     </p>
 
     <p class="mt-10">
-        My journey into IT builds on a creative foundation. Before studying technology, 
-        I earned a bachelor’s degree in art, where I developed a strong sense of visual expression, 
-        composition, and hands-on creativity. 
-        <br>
-        <br>
-        Transitioning into IT has allowed me to expand that creativity 
-        into the digital space—working with programming, system development, and databases. 
-        I enjoy the process of turning ideas into interactive solutions, whether through clean code or thoughtful design. 
-        For me, the most rewarding projects are those where creativity and functionality meet.
+        <span data-lang="en">
+            My journey into IT builds on a creative foundation. Before studying technology,
+            I earned a bachelor’s degree in contemporary art, where I developed a strong sense of visual expression,
+            composition, and hands-on creativity.
+            <br />
+            <br />
+            Transitioning into IT has allowed me to expand that creativity
+            into the digital space—working with programming, system development, and databases.
+            I enjoy the process of turning ideas into interactive solutions, whether through clean code or thoughtful design.
+            For me, the most rewarding projects are those where creativity and functionality meet.
+        </span>
+        <span data-lang="no">
+            Min vei inn i IT bygger på et kreativt grunnlag. Før jeg studerte teknologi, tok jeg en bachelorgrad i samtidskunst,
+            der jeg utviklet en sterk sans for det visuelle, komposisjon og kreativitet gjennom det fysiske mediet.
+            <br />
+            <br />
+            Overgangen til IT har latt meg utvide kreativiteten inn i det digitale, med arbeid innen programmering,
+            systemutvikling og databaser. Jeg liker prosessen med å gjøre ideer om til interaktive løsninger, enten gjennom ren kode eller gjennomtenkt design.
+            For meg er de mest givende prosjektene de der kreativitet og funksjonalitet møtes.
+        </span>
     
     </p>
 
@@ -51,54 +69,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <section class="mt-20 grid gap-8 sm:grid-cols-2">
    
             <div class="bg-white/25 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl hover:bg-purple-400/20">
-                <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">Education and Languages</h2>
+                <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">
+                    <span data-lang="en">Education and Languages</span>
+                    <span data-lang="no">Utdanning og språk</span>
+                </h2>
                 <hr />
                
                 <ul class="list-disc list-outside mt-8 space-y-2">
-                   <li>Bachelor's degree in Information Technology at the University of South-Eastern Norway (2023-2026)</li>
-                    <li>Bachelor’s degree in contemporary art at Nordland School of Arts and Film (2013-2016)</li>
+                   <li><span data-lang="en">Bachelor's degree in Information Technology at the University of South-Eastern Norway (2023-2026)</span><span data-lang="no">Bachelorgrad i IT og informasjonssystemer ved Universitetet i Sørøst-Norge (2023-2026)</span></li>
+                    <li><span data-lang="en">Bachelor’s degree in contemporary art at Nordland School of Arts and Film (2013-2016)</span><span data-lang="no">Bachelorgrad i samtidskunst ved Nordland kunst- og filmhøgskole (2013-2016)</span></li>
                     <br>
-                    <li>Fluent in Norwegian and English</li>
+                    <li><span data-lang="en">Fluent in Norwegian and English</span><span data-lang="no">Flytende i norsk og engelsk</span></li>
                 </ul>
             </div>
 
             {/* Programming skills */}
             <div class="bg-white/25 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl hover:bg-purple-400/20">
-                <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">Technical Skills</h2>
+                <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">
+                    <span data-lang="en">Technical Skills</span>
+                    <span data-lang="no">Tekniske ferdigheter</span>
+                </h2>
                 <hr />
 
                 <ul class="list-disc list-outside mt-8 space-y-3">
-                    <li>Foundational programming skills: Java </li>
-                    <li>Foundational web development skills (HTML & CSS) familiar with Astro, Tailwind, JavaScript, React, Node.js</li>
-                    <li>Database management: Familiar with MongoDB, SQL</li>
-                    <li>Version control: Git and GitHub</li>
-                    <li>Project management and teamwork</li>
+                    <li><span data-lang="en">Foundational programming skills: Java</span><span data-lang="no">Programmering: Java</span></li>
+                    <li><span data-lang="en">Foundational web development skills (HTML & CSS) familiar with Astro, Tailwind, JavaScript, React, Node.js</span><span data-lang="no">Webutvikling: HTML og CSS, Astro, Tailwind, JavaScript, React og Node.js</span></li>
+                    <li><span data-lang="en">Database management: Familiar with MongoDB, SQL</span><span data-lang="no">Database: MongoDB og SQL</span></li>
+                    <li><span data-lang="en">Version control: Git and GitHub</span><span data-lang="no">Versjonskontroll: Git og GitHub</span></li>
+                    <li><span data-lang="en">Project management and teamwork</span><span data-lang="no">Prosjektledelse og samarbeid</span></li>
                 </ul>
             </div>
 
             {/* Creative skills */}
             <div class="bg-white/25 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl  hover:bg-purple-400/20">
-            <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">Creative Skills</h2>
+            <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">
+                <span data-lang="en">Creative Skills</span>
+                <span data-lang="no">Kreative ferdigheter</span>
+            </h2>
                 <hr />
 
                 <ul class="list-disc list-outside mt-8 space-y-3">
-                    <li>Visual design and artistic concepts </li>
-                    <li>Creative problem-solving and design thinking</li>
-                    <li>Experience with various art mediums and techniques</li>
+                    <li><span data-lang="en">Visual design and artistic concepts</span><span data-lang="no">Visuell design og kunstneriske konsepter</span></li>
+                    <li><span data-lang="en">Creative problem-solving and design thinking</span><span data-lang="no">Kreativ problemløsning og designtenkning</span></li>
+                    <li><span data-lang="en">Experience with various art mediums and techniques</span><span data-lang="no">Erfaring med ulike kunstmedier og teknikker</span></li>
                 </ul>
             </div>
 
             {/* Other interests */}
             <div class="bg-white/25 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] shadow-2xl  hover:bg-purple-400/20">
-            <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">Other Interests</h2>
+            <h2 class="text-center uppercase text-xl font-semibold mb-6 tracking-widest">
+                <span data-lang="en">Other Interests</span>
+                <span data-lang="no">Andre interesser</span>
+            </h2>
                 <hr />
 
                 <ul class="list-disc list-outside mt-8 space-y-2">
-                    <li>Knitting, reading</li>
-                    <li>Drawing, painting, sculpting, digital art</li>
-                    <li>Cooking and baking</li>
-                    <li>Photography, plants, nature walks</li>
-                    <li>Gaming with friends</li>
+                    <li><span data-lang="en">Knitting, reading</span><span data-lang="no">Strikking, lesing</span></li>
+                    <li><span data-lang="en">Drawing, painting, sculpting, digital art</span><span data-lang="no">Tegning, maling, skulptur og digital kunst</span></li>
+                    <li><span data-lang="en">Cooking and baking</span><span data-lang="no">Matlaging og baking</span></li>
+                    <li><span data-lang="en">Photography, plants, nature walks</span><span data-lang="no">Fotografering, planter og turer i naturen</span></li>
+                    <li><span data-lang="en">Gaming with friends</span><span data-lang="no">Gaming med venner</span></li>
 
                 </ul>
             </div>

@@ -3,30 +3,31 @@ import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-{/* Denne siden er kommentert ut, enn så lenge! */}
-
 <BaseLayout>
     
     <h1 class="text-center mt-10 mb-15 text-3xl">Art</h1>
-   <p class="mb-6 uppercase font-semibold text-sm text-center tracking-wide">
-        Acrylics · Digital art · Graphite · Mixed media · Watercolour
+   <p class="mt-5 uppercase font-semibold text-sm text-center tracking-wide">
+       <span data-lang="en">Acrylics · Digital art · Graphite · Mixed media · Watercolour</span>
+       <span data-lang="no">Akryl · Digital kunst · Grafitt · Blandet medium · Akvarell</span>
     </p>
 
-    <p class="text-center mt-10 mb-20 text-sm md:text-lg max-w-3xl mx-auto">
-        I have always been passionate about art, and it has been a significant part of my life. 
-        My artistic journey has allowed me to express myself creatively and develop a unique perspective that I bring into my work in IT.
+    <p class="text-center mt-10 mb-10 text-sm md:text-lg max-w-3xl mx-auto">
+        <span data-lang="en">I have always been passionate about art, and it has been a significant part of my life. 
+        My artistic journey has allowed me to express myself creatively and develop a unique perspective that I bring into my work in IT.</span>
+        <span data-lang="no">Jeg har alltid hatt en lidenskap for kunst, som har vært en betydelig del av livet mitt.
+        Min bakgrunn innen kunst tillater meg å uttrykke meg kreativt og utvikle et unikt perspektiv som jeg bringer inn i mitt arbeid innen IT.</span>
     </p>
 
-    <p class="mt-10 text-center text-3xl">
+    <p class="mt-5 text-center text-3xl">
         🌸
     </p>
 
     {/* Gallery Section */}
-    <section class="mt-20 flex items-baseline flex-wrap gap-4 mb:20 justify-center">
-
-        <img src="/images/maleri.png" class="w-85 h-85 object-cover shadow-2xl transition-transform duration-500 hover:scale-105 rounded-2xl" />
-        <img src="/images/tegning2.png" class="w-80 h-105 object-cover shadow-2xl transition-transform duration-500 hover:scale-105 rounded-2xl" />
-
+        <section class="mx-auto mt-15 flex max-w-7xl flex-col items-center gap-10 px-4 py-1">
+            <img src="/images/maleri.png" class="h-auto w-120 rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-105" />
+            <img src="/images/SvaneMaleri1.jpg" class="h-auto w-120 rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-105" />
+            <img src="/images/Krokibilde.png" class="h-auto w-120 rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-105" /> 
+            <img src="/images/tegning2.png" class="h-150 w-100 rounded-2xl object-cover shadow-2xl transition-transform duration-500 hover:scale-105" />
     </section>
 
 </BaseLayout>
